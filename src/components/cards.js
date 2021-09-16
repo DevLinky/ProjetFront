@@ -1,19 +1,13 @@
-// import React from 'react';
+import React from 'react';
+import listOfCards from './listOfCards';
 
-// let url = 'http://localhost:4000/cards';
-
-// const CollectionCards = () => {
+const Card = () => {
     
-//         {for(i=0;i<cards.length;i++){
-//         return( 
-//         <div className="collectionBoard">
-//             <div className="cardsContainer">
-//                 <div className="cardsContent">{Cards[i].image}</div>
-//             </div>
-//         </div>    
-//         );
-//     }}       
-    
-// }
+        return( 
+            <div className="cardsContainer">
+                <div className="cardsContent">{listOfCards}</div>
+            </div>
+        );
+    }  
 
-// export default CollectionCards;
+export default Card;

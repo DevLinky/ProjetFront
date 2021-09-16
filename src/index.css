@@ -23,6 +23,7 @@ code {
   height: 30%;
   width: 10%;
   border: 3px solid yellow;
+  background:red;
   
 }
 .cardContent {
@@ -31,11 +32,44 @@ code {
   width:100%;
 }
 .newCard{
-  margin-left: auto;
-  margin-right: auto;
-  height:85%;
-  width: 95%;
+  top:40%;
+  /* height:85%;*/
+  width: 50%;
+  left:25%;
+  margin-left:auto;
+  margin-right:auto;
   position: absolute;
   text-align:center;
+  background:whitesmoke;
+  overflow:hidden;
+  padding:1px;
+}
+.newCard input{
+  opacity: .8;
+
+  border: 3px solid rgb(108, 190, 115);
+  border-radius: 5px;
+  margin:1vh;
+  transition: ease .2s;
+}
+.newCard input:hover{
+  
+  background:rgb(108, 190, 115);
+  border-radius: 5px;
+  margin:1vh;
+}
+.buttons{
+  margin-bottom:5px;
+  opacity:.8;
+  color:whitesmoke;
+  width: 20%;
+  height: 10%;
+  border: 3px solid rgb(108, 190, 115);
+  background-color: rgb(108, 190, 115);
+  transition:ease .15s;
+
+}
+.buttons:hover{
+  transform: scale(1.1);
 }
 li{display:inline-block}

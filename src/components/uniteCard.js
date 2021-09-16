@@ -1,5 +1,8 @@
 import axios from 'axios';
 import React from 'react';
+import ListingCards from './listingCards';
+import listOfCards from './listOfCards';
+import '../index.css';
 
 const url = 'http://localhost:5000/cards';
 
@@ -35,6 +38,7 @@ export default class Cards extends React.Component {
           const {name, mana, attack, HP, desc, effect, type, image} = this.state
         return (
             <div className="newCard">
+                <listOfCards />
             <form onSubmit={this.handleSubmit}>
                 <label>Nom de carte:
                 <input type="text" name="name" value={name} onChange={this.handleChange}></input>
@@ -63,7 +67,8 @@ export default class Cards extends React.Component {
                 <label>Type:
                 <input type="text" name="type" value={type} onChange={this.handleChange}></input>
                 </label>
-                <button type="submit">Créer</button>
+                <br></br>
+                <button type="submit" className="buttons">CRÉER</button>
             </form>
             </div>
         )

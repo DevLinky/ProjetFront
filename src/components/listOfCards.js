@@ -1,9 +1,10 @@
 import axios from 'axios';
 import React from 'react';
+import Cards from './uniteCard';
 
 const url = 'http://localhost:5000/cards';
 
-export default class getData extends React.Component {
+export default class listOfCards extends React.Component {
     state = {
         listOfCards: []
       }
@@ -17,14 +18,12 @@ export default class getData extends React.Component {
       }
       render() {
         return (
-            <div>{this.state.listOfCards}
-          <ul>
-            { this.state.listOfCards.map(listOfCards => <li className="cardsContainer">{listOfCards.name}</li>)}
+            <div>
+          <ul>PUEOIAHAOEINAKNDSQNDL
+            { this.state.listOfCards.map(listOfCards => <li key={listOfCards.id } className="cardsContainer">TEST</li>)}
           </ul>
           </div>
         )
       }
         
 }
-
-// export default Collection;
