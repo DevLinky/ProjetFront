@@ -59,6 +59,8 @@ code {
   margin:1vh;
 }
 .buttons{
+  font-weight:900;
+  font-size: 1.2vw;
   margin-bottom:5px;
   opacity:.8;
   color:whitesmoke;
