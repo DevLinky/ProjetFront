@@ -46,16 +46,14 @@ code {
 }
 .newCard input{
   opacity: .8;
-
   border: 3px solid rgb(108, 190, 115);
   border-radius: 5px;
   margin:1vh;
   transition: ease .2s;
 }
 .newCard input:hover{
-  
+  color:white;
   background:rgb(108, 190, 115);
-  border-radius: 5px;
   margin:1vh;
 }
 .buttons{

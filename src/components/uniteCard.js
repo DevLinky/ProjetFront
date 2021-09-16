@@ -44,7 +44,7 @@ export default class Cards extends React.Component {
                 <input type="text" name="name" value={name} onChange={this.handleChange}></input>
                 </label>
                 <label>Image:
-                <input type="text" name="image" value={image} onChange={this.handleChange}></input>
+                <input type="file" name="image" value={image} onChange={this.handleChange}></input>
                 </label>
                 <br></br>
                 <label>Coût en mana:
