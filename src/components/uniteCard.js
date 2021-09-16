@@ -2,12 +2,6 @@ import axios from 'axios';
 import React from 'react';
 
 const url = 'http://localhost:5000/cards';
-let axiosConfig = {
-    headers: {
-        'Content-Type': 'application/json;charset=UTF-8',
-        "Access-Control-Allow-Origin": "*",
-    }
-  };
 
 export default class Cards extends React.Component {
     constructor(props){
@@ -20,7 +14,7 @@ export default class Cards extends React.Component {
         attack:Number,
         HP: Number,
         desc: '',
-        effect:""
+        effect:''
       }
     }
       handleChange = event => {
@@ -30,7 +24,7 @@ export default class Cards extends React.Component {
           event.preventDefault();
           console.log(this.state)
 
-          axios.post(`http://localhost:5000/cards/`, this.state)
+          axios.post(url, this.state)
           .then(res => {
               console.log(res);
               console.log(res.data);
@@ -40,6 +34,7 @@ export default class Cards extends React.Component {
       render() {
           const {name, mana, attack, HP, desc, effect, type, image} = this.state
         return (
+            <div className="newCard">
             <form onSubmit={this.handleSubmit}>
                 <label>Nom de carte:
                 <input type="text" name="name" value={name} onChange={this.handleChange}></input>
@@ -47,18 +42,21 @@ export default class Cards extends React.Component {
                 <label>Image:
                 <input type="text" name="image" value={image} onChange={this.handleChange}></input>
                 </label>
+                <br></br>
                 <label>Coût en mana:
                 <input type="text" name="mana" value={mana} onChange={this.handleChange}></input>
                 </label>
                 <label>Attack:
                 <input type="text" name="attack" value={attack} onChange={this.handleChange}></input>
                 </label>
+                <br></br>
                 <label>HPs:
                 <input type="text" name="HP" value={HP} onChange={this.handleChange}></input>
                 </label>
                 <label>Description:
                 <input type="text" name="desc" value={desc} onChange={this.handleChange}></input>
                 </label>
+                <br></br>
                 <label>Effets:
                 <input type="text" name="effect" value={effect} onChange={this.handleChange}></input>
                 </label>
@@ -67,6 +65,7 @@ export default class Cards extends React.Component {
                 </label>
                 <button type="submit">Créer</button>
             </form>
+            </div>
         )
       }
         
