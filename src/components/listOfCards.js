@@ -19,7 +19,7 @@ export default class listOfCards extends React.Component {
       render() {
         return (
             <div>
-          <ul>PUEOIAHAOEINAKNDSQNDL
+          <ul>
             { this.state.listOfCards.map(listOfCards => <li key={listOfCards.id } className="cardsContainer">TEST</li>)}
           </ul>
           </div>
